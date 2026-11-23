@@ -42,9 +42,9 @@ struct StaffUser {
 
 pub fn router() -> Router<AppState> {
     Router::new()
-        .route("/", post(create_task))
-        .route("/assign", post(assign_task))
-        .route("/view-my-tasks", get(view_my_tasks))
+        .route("/tasks", post(create_task))
+        .route("/tasks/assign", post(assign_task))
+        .route("/tasks/view-my-tasks", get(view_my_tasks))
 }
 
 // --------------------------------------------------
